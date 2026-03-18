@@ -96,11 +96,4 @@ class ValidacaoSoLetras extends ValidacaoHandler {
 
 ---
 
-## Divisão sugerida para os 30 min
 
-| Tempo | Quem | O que fazer |
-|-------|------|-------------|
-| 0–5 min | **Você** | Cria repo, sobe estrutura, define qual padrão será apresentado |
-| 5–20 min | Colegas | Implementam os `// TODO` do padrão sorteado |
-| 20–25 min | **Você** | Revisa PRs, integra, testa endpoint |
-| 25–30 min | Todos | Prepara explicação: problema → solução → demo |
