@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "PadroesApplication",
+      "request": "launch",
+      "mainClass": "com.aula.padroes.PadroesApplication",
+      "projectName": "padroes-de-projeto"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot (padroes-de-projeto)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aula.padroes.PadroesApplication",
+      "projectName": "padroes-de-projeto"
+    }
+  ]
+}

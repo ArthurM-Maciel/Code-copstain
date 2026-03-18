@@ -5,10 +5,10 @@
 ## Como rodar
 
 ```bash
-./mvnw spring-boot:run
-# ou
 mvn spring-boot:run
 ```
+
+Ou, se tiver o Maven Wrapper (`mvnw`): `./mvnw spring-boot:run`
 
 Acesse: http://localhost:8080
 
