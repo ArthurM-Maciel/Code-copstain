@@ -1,12 +1,9 @@
 package com.aula.padroes.strategy;
 
-import org.springframework.stereotype.Component;
-
 // ============================================================
 // IMPLEMENTAÇÕES CONCRETAS — cada colega pode fazer uma
 // ============================================================
 
-@Component("pix")
 class PagamentoPix implements PagamentoStrategy {
     @Override
     public String pagar(double valor) {
@@ -15,7 +12,6 @@ class PagamentoPix implements PagamentoStrategy {
     }
 }
 
-@Component("cartao")
 class PagamentoCartao implements PagamentoStrategy {
     @Override
     public String pagar(double valor) {
@@ -24,7 +20,6 @@ class PagamentoCartao implements PagamentoStrategy {
     }
 }
 
-@Component("boleto")
 class PagamentoBoleto implements PagamentoStrategy {
     @Override
     public String pagar(double valor) {

@@ -6,15 +6,15 @@
       "name": "PadroesApplication",
       "request": "launch",
       "mainClass": "com.aula.padroes.PadroesApplication",
-      "projectName": "padroes-de-projeto"
+      "projectName": "design-patterns"
     },
     {
       "type": "java",
-      "name": "Spring Boot (padroes-de-projeto)",
+      "name": "design-patterns",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "com.aula.padroes.PadroesApplication",
-      "projectName": "padroes-de-projeto"
+      "projectName": "design-patterns"
     }
   ]
 }

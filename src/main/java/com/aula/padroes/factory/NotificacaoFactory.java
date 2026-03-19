@@ -1,11 +1,8 @@
 package com.aula.padroes.factory;
 
-import org.springframework.stereotype.Component;
-
 /**
  * A fábrica — decide qual implementação criar baseado no tipo.
  */
-@Component
 public class NotificacaoFactory {
 
     public Notificacao criar(String tipo) {

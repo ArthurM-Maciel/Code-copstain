@@ -1,7 +1,5 @@
 package com.aula.padroes.factory;
 
-import org.springframework.stereotype.Component;
-
 /**
  * PADRÃO: Factory Method (Criação)
  *
@@ -23,7 +21,6 @@ public interface Notificacao {
 // IMPLEMENTAÇÕES CONCRETAS — cada colega pode fazer uma
 // ============================================================
 
-@Component
 class NotificacaoSms implements Notificacao {
     @Override
     public String enviar(String mensagem) {
@@ -32,7 +29,6 @@ class NotificacaoSms implements Notificacao {
     }
 }
 
-@Component
 class NotificacaoEmail implements Notificacao {
     @Override
     public String enviar(String mensagem) {
@@ -41,7 +37,6 @@ class NotificacaoEmail implements Notificacao {
     }
 }
 
-@Component
 class NotificacaoPush implements Notificacao {
     @Override
     public String enviar(String mensagem) {

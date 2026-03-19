@@ -1,7 +1,5 @@
 package com.aula.padroes.decorator;
 
-import org.springframework.stereotype.Component;
-
 /**
  * PADRÃO: Decorator (Estrutural)
  *
@@ -24,7 +22,6 @@ public interface TextoService {
 // COMPONENTE BASE
 // ============================================================
 
-@Component
 class TextoServiceBase implements TextoService {
     @Override
     public String processar(String texto) {

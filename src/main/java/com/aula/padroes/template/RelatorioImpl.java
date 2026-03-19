@@ -1,12 +1,9 @@
 package com.aula.padroes.template;
 
-import org.springframework.stereotype.Component;
-
 // ============================================================
 // IMPLEMENTAÇÕES CONCRETAS — cada colega pode fazer uma
 // ============================================================
 
-@Component("relatorioVendas")
 class RelatorioVendas extends RelatorioTemplate {
 
     @Override
@@ -21,7 +18,6 @@ class RelatorioVendas extends RelatorioTemplate {
     }
 }
 
-@Component("relatorioEstoque")
 class RelatorioEstoque extends RelatorioTemplate {
 
     @Override

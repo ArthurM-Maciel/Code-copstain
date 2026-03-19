@@ -1,22 +1,18 @@
 package com.aula.padroes.strategy;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.Map;
 
 /**
  * Contexto que usa a Strategy.
- * Recebe todas as implementações via injeção de dependência do Spring
- * e escolhe qual usar baseado no nome.
+ * Recebe as implementações no construtor e escolhe qual usar baseado no nome.
  */
-@Service
 public class PagamentoContext {
 
-    // Spring injeta automaticamente todas as implementações de PagamentoStrategy
-    // mapeadas pelo nome do @Component
-    @Autowired
-    private Map<String, PagamentoStrategy> estrategias;
+    private final Map<String, PagamentoStrategy> estrategias;
+
+    public PagamentoContext(Map<String, PagamentoStrategy> estrategias) {
+        this.estrategias = estrategias;
+    }
 
     /**
      * Executa o pagamento usando a estratégia informada.

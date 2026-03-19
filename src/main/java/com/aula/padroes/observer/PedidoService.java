@@ -1,7 +1,5 @@
 package com.aula.padroes.observer;
 
-import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +7,6 @@ import java.util.List;
 // SUBJECT — quem dispara os eventos
 // ============================================================
 
-@Service
 public class PedidoService {
 
     private final List<PedidoObserver> observers = new ArrayList<>();

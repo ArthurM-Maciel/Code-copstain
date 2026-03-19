@@ -1,12 +1,9 @@
 package com.aula.padroes.chain;
 
-import org.springframework.stereotype.Component;
-
 // ============================================================
 // HANDLERS CONCRETOS — cada colega pode criar um
 // ============================================================
 
-@Component
 class ValidacaoNaoVazio extends ValidacaoHandler {
     @Override
     protected String checar(String dados) {
@@ -17,7 +14,6 @@ class ValidacaoNaoVazio extends ValidacaoHandler {
     }
 }
 
-@Component
 class ValidacaoTamanhoMinimo extends ValidacaoHandler {
     @Override
     protected String checar(String dados) {
@@ -28,7 +24,6 @@ class ValidacaoTamanhoMinimo extends ValidacaoHandler {
     }
 }
 
-@Component
 class ValidacaoSemEspacos extends ValidacaoHandler {
     @Override
     protected String checar(String dados) {

@@ -1,8 +1,5 @@
 package com.aula.padroes.observer;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class EstoqueObserver implements PedidoObserver {
     @Override
     public void onPedidoPago(String pedidoId, double valor) {
