@@ -14,8 +14,7 @@ Sugestões:
 - Acrescentar o string "NIVEL 2" na frente da mensagem de log
 ## Q4: Sistema de notificação usando observer
 Aplicar o padrão observer de maneira a tornar mais simples o acrescimo de novos visualizadores e/ou a ativação/desativação deles.
-## Q5: Sistema de registro de vendas usando Composite *(minha atividade)*
-Aplicar o padrão Composite de maneira que seja possível criar ofertas que correspondem a kits de produtos.  
-**Solução:** pasta `Q5_VendaKits/`. Ver `Q5_VendaKits/README.md` para detalhes e exemplo de uso.
+## Q5: Sistema de registro de vendas usando Composite
+Aplicar o padrão Composite de maneira que seja possível criar ofertas que correspondem a kits de produtos.
 ## Q6: Dado capaz de armazenar a relação dos valores sorteados nas últimas jogadas
 Aplicar o padrão decorator sobre um dado simples.
