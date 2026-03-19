@@ -1,4 +1,7 @@
-public class Produto {
+/**
+ * Folha do padrão Composite: produto unitário vendável.
+ */
+public class Produto implements ItemVendavel {
     private int id;
     private String nome;
     private double preco;
