@@ -1,84 +1,20 @@
-# Padrões de Projeto — Exercício Aula
+# Desafio sobre Padrões de Projeto
+O objetivo é resolver a maior quantidade de problemas usando padrões de projeto. Em todas as questões apresentar o código usando o padrão e um exemplo de uso. Verifique o arquivo README de cada questão para maiores detalhes.
 
-> Fundamentos de Desenvolvimento de Software · Prof. Bernardo Copstein
-
-## Como rodar
-
-Projeto **Java puro** (sem Spring Boot). Execute a classe principal:
-
-```bash
-mvn compile exec:java -Dexec.mainClass="com.aula.padroes.PadroesApplication"
-```
-
-Ou rode `PadroesApplication` pelo IDE (Run/Debug). A saída no console demonstra cada padrão.
-
----
-
-## Estrutura do projeto
-
-```
-src/main/java/com/aula/padroes/
-│
-├── PadroesApplication.java   ← main(): demonstra todos os padrões no console
-├── strategy/                 ← Strategy: PagamentoStrategy + implementações (StrategyRunner)
-├── factory/                  ← Factory Method: NotificacaoFactory + Notificacao
-├── observer/                 ← Observer: PedidoObserver (interface) + PedidoService
-├── singleton/                ← Singleton: ConfiguracaoService (getInstance())
-├── decorator/                ← Decorator: TextoService + LogDecorator + CacheDecorator (DecoratorRunner)
-├── template/                 ← Template Method: RelatorioTemplate + implementações (TemplateRunner)
-└── chain/                    ← Chain of Responsibility: ValidacaoHandler + handlers (ChainRunner)
-```
-
----
-
-## Como cada colega contribui
-
-Cada padrão tem `// TODO` marcando exatamente onde adicionar lógica.
-
-### Strategy — adicionar nova forma de pagamento
-```java
-// Em strategy/PagamentoStrategyImpl.java
-class PagamentoDebito implements PagamentoStrategy {
-    public String pagar(double valor) {
-        return "Débito de R$" + valor + " processado.";
-    }
-}
-// Em strategy/StrategyRunner.java: adicione "debito", new PagamentoDebito() no Map
-```
-
-### Observer — adicionar novo observer
-```java
-// Novo arquivo observer/WhatsappObserver.java (ou no mesmo pacote)
-public class WhatsappObserver implements PedidoObserver {
-    public void onPedidoPago(String pedidoId, double valor) {
-        System.out.println("[WHATSAPP] Pedido " + pedidoId + " pago!");
-    }
-}
-// Em PadroesApplication: pedidoService.addObserver(new WhatsappObserver());
-```
-
-### Template Method — adicionar novo relatório
-```java
-// Em template/RelatorioImpl.java
-class RelatorioClientes extends RelatorioTemplate {
-    protected String cabecalho() { return "=== RELATÓRIO DE CLIENTES ==="; }
-    protected String corpo() { return "Cliente A, Cliente B, Cliente C"; }
-}
-// Em template/TemplateRunner.java: adicione "relatorioClientes", new RelatorioClientes() no Map
-```
-
-### Chain — adicionar nova validação
-```java
-// Em chain/ValidacaoHandlerImpl.java
-class ValidacaoSoLetras extends ValidacaoHandler {
-    protected String checar(String dados) {
-        if (!dados.matches("[a-zA-Z]+")) return "Apenas letras permitidas.";
-        return null;
-    }
-}
-// Em chain/ChainRunner.java: adicione o novo handler na cadeia
-```
-
----
-
-
+## Q1: Classe validadora de campos string usando Strategy
+Aplicar o padrão strategy a fim de permitir acrescentar outros validadores
+## Q2 Sistema de log simples usando Singleton
+Aplicar o padrão Singleton para permitir acessar o mecanismo de log de qualquer ponto do programa
+## Q3 Sistema de log com níveis usando Decorator
+Aplicar o padrão Decorator para permitir acrescentar diferentes informações no log.
+Sugestões: 
+- envolver a mensagem de log entre colchetes "[mensagem]"
+- colocar a mensagem de log em letras maiusculas
+- Acrecentar o string "NIVEL 1" na frente da mensagem de log
+- Acrescentar o string "NIVEL 2" na frente da mensagem de log
+## Q4: Sistema de notificação usando observer
+Aplicar o padrão observer de maneira a tornar mais simples o acrescimo de novos visualizadores e/ou a ativação/desativação deles.
+## Q5: Sistema de registro de vendas usando Composite
+Aplicar o padrão Composite de maneira que seja possível criar ofertas que correspondem a kits de produtos.
+## Q6: Dado capaz de armazenar a relação dos valores sorteados nas últimas jogadas
+Aplicar o padrão decorator sobre um dado simples.
