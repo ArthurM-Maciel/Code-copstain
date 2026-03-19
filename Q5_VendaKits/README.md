@@ -1,9 +1,21 @@
-# Objetivo
+# Q5: Sistema de registro de vendas usando Composite
 
-Um sistema de vendas de uma famosa cadeia de lojas precisa registrar a venda de produtos e emitir um comprovante de venda simplificado. Para registrar a venda de um produto é necessário conhecer o código e a quantidade do produto sendo vendido. O comprovante de venda simplificado possui uma listagem contendo cada produto (com seu nome, quantidade, preço unitário e subtotal), bem como o valor total da venda efetuada.
+## Objetivo
 
-Sabe-se que o sistema apresenta um novo requisito. Os produtos vendidos podem ser agrupados em “kits”. Cada kit pode ser vendido a partir de agora como um novo produto. O preço unitário do kit deve ser a soma dos preços individuais de cada produto, com aplicação de um desconto de 10% sobre o valor total. Aplique o padrão Composite em uma nova implementação do sistema.
+Registrar a venda de produtos e emitir comprovante. Produtos podem ser agrupados em **kits**: cada kit é vendido como um item, com preço = soma dos preços dos itens com **10% de desconto**. Padrão **Composite** aplicado.
 
-O exemplo de uso deve ser alterado de maneira a explorar o uso do padrão.
+## Estrutura do Composite
 
-**Atenção**  o padrão composite não foi visto no material, cabe ao grupo pesquisar nas referências como utilizá-lo.
+- **Component:** `ItemVendavel` (interface) – contrato para tudo que pode ser vendido
+- **Leaf:** `Produto` – produto unitário
+- **Composite:** `Kit` – agrupa vários `ItemVendavel`; `getPreco()` retorna soma × 0,90
+
+## Como executar
+
+```bash
+cd Q5_VendaKits
+javac -d out src/*.java
+java -cp out App
+```
+
+O exemplo em `App` vende 1 Caneta, 2 Borrachas e 1 Kit Escolar e imprime o comprovante.
